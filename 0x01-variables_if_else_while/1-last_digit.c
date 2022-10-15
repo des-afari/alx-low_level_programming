@@ -1,4 +1,4 @@
-include <stdlib.h>
+#include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
 
@@ -10,7 +10,7 @@ include <stdlib.h>
  */
 int main(void)
 {
-	int n
+	int n;
 	int r;
 
 	srand(time(0));
