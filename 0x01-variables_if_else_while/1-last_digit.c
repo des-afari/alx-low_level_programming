@@ -10,7 +10,8 @@ include <stdlib.h>
  */
 int main(void)
 {
-	int n,r;
+	int n
+	int r;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
