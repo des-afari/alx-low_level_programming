@@ -3,6 +3,8 @@
 /**
  * print_last_digit - Entry point
  *
+ * @n: value
+ *
  * Return: 0
  *
  */
