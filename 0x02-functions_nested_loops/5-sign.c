@@ -23,7 +23,7 @@ int print_sign(int n)
 	}
 	else
 	{
-		_putchar('-1');
+		_putchar('-');
 		return (-1);
 	}
 }
