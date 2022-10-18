@@ -3,9 +3,9 @@
 /**
  * _islower - Entry point
  *
- * Description: Prints out all lower case alphabets
+ * @c: value
  *
- * Return: Always 0 (Success)
+ * Return: 0 or 1
  *
  */
 
@@ -13,7 +13,7 @@ int _islower(int c)
 {
 	int value = islower(c);
 
-	if (value > 0) 
+	if (value > 0)
 	{
 		return (1);
 	}
