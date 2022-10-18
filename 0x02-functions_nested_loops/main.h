@@ -11,3 +11,5 @@ int _islower(int c);
 #include <ctype.h>
 
 int _isalpha(int c);
+
+int print_sign(int n);
