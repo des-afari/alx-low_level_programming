@@ -3,6 +3,8 @@
 /**
  * main - Entry point
  *
+ *Description: Prints out all lower case alphabets
+ *
  * Return: Always 0 (Success)
  *
  */
