@@ -11,7 +11,7 @@
 
 int _abs(int n)
 {
-	int value = int abs(n);
+	int value = abs(n);
 
 	return (value);
 }
