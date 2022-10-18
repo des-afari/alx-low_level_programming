@@ -17,3 +17,5 @@ int print_sign(int n);
 #include <stdlib.h>
 
 int _abs(int);
+
+int print_last_digit(int);
