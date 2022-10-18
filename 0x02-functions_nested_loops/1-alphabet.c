@@ -7,18 +7,14 @@
  *
  */
 
-int main(void)
-{
-	print_alphabet();
-
-	return (0);
-}
-
-
 void print_alphabet(void)
 {
-	for (char alphabet = 'a'; alphabet <= 'z'; alphabet++)
+	char alphabet;
+
+	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 	{
-		printf("%c", alphabet);
+		_putchar(alphabet);
 	}
+
+	_putchar('\n');
 }
