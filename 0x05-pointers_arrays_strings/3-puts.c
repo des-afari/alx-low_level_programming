@@ -11,7 +11,10 @@
 
 int _puts(char *str)
 {
-	puts(*str);
-	printf("\n");
+	for (; *str != "\0"; str++)
+	{
+		_putchar(*str);
+	}
+	_putchar("\n");
 }
 
