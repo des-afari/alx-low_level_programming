@@ -11,6 +11,7 @@
 
 int _puts(char *str)
 {
-	puts(str);	
+	puts(*str);
+	printf("\n");
 }
 
