@@ -1,8 +1,5 @@
 #include "main.h"
-<<<<<<< HEAD
-=======
 
->>>>>>> 8327161830ab02db163a31e3bb8597491914895d
 /**
  * _strcpy - Copy a string
  *
