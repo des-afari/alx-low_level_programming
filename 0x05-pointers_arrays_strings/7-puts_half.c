@@ -1,36 +1,38 @@
 #include "main.h"
 
 /**
- * puts_half - function that divides a string in two
- *
- * @str: string variable
- *
- * Return: null
- *
- */
+  * puts_half - Prints half of a string
+  * 
+  * @str: The string to print
+  *
+  * Return: void
+  */
 
 void puts_half(char *str)
 {
-	int i;
-	int length = strlen(str);
-	int start = length / 2;
-	int end = length;
+	int j = 0;
+	int k;
 
-	if (length % 2 != 0)
+	while (str[j] != '\0')
 	{
-		i = (length - 1) / 2;
-		i += 1;
+		j++;
 	}
 
+	if (j % 2 == 1)
+	{
+		k = (j - 1) / 2;
+		k += 1;
+	}
 	else
 	{
-		i = length / 2;
+		k = j / 2;
 	}
 
-	for (i = start; i < end; i++)
+	for (; k < j; k++)
 	{
-		printf("%c", str[i]);
-
+		_putchar(str[k]);
 	}
-	printf("\n");
+
+	_putchar('\n');
 }
+
