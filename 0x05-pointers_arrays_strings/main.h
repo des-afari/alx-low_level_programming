@@ -22,4 +22,4 @@ void puts_half(char *str);
 
 void print_array(int *a, int n);a
 
-char *_strcpy(char *dest, char *src);
+ 11 char *_strcpy(char *dest, char *src);
