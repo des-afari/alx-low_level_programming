@@ -1,25 +1,31 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
-  * _strcpy - Copy a string
-  *
-  * @dest: Destination value
-  *
-  * @src: Source value
-  *
-  * Return: the pointer to dest
-  */
+ * _strncpy - cpoies n bytes of src to the dest string
+ *
+ * @dest: string to copy to
+ *
+ * @src: string being copied
+ *
+ * @n: largest number of bytes to copy
+ *
+ * Return: address of dest
+ */
 
-char *_strcpy(char *dest, char *src)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
-	for (i = 0; src[i] != '\0'; i++)
+	i = 0;
+	while (i < n && *(src + i))
 	{
-		dest[i] = src[i];
+		*(dest + i) = *(src + i);
+		i++;
 	}
-
-	dest[i++] = '\0';
-
+	while (i < n)
+	{
+		*(dest + i) = '\0';
+		i++;
+	}
 	return (dest);
 }
