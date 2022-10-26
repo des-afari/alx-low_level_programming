@@ -15,11 +15,21 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	char *result = malloc(strlen(dest) + strlen(src) + 2);
+	int a = 0; j = 0;
 
-	strcpy(result, dest);
-	strcat(result, " ");
-	strncat(result, src, n);
+	while (dest[a])
+	{
+		dlen++;
+	}
 
-	return (result);
+	while (j < n && src[j])
+	{
+		dest[a] = src[j];
+		a++;
+		j++;
+	}
+
+	dest[a + n + 1] = '\0';
+
+	return (dest);
 }

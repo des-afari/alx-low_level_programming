@@ -15,10 +15,24 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *result = malloc(strlen(dest) + strlen(src));
+	int a = 0, b = 0;
 
-	strcpy(result, dest);
-	strncpy(result, src, n);
+	while (src[b])
+	{
+		b++;
+	}
 
-	return (result);
+	while (a < n && src[a])
+	{
+		dest[a] = src[a];
+		a++;
+	}
+
+	while (a < n)
+	{
+		dest[a] = '\0';
+		a++;
+	}
+
+	return (dest);
 }

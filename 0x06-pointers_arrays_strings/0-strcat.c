@@ -13,13 +13,21 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *result = malloc(strlen(dest) + strlen(src) + 2);
+	int a = 0; int i;
 
-	strcpy(result, dest);
-	strcat(result, " ");
-	strcat(result, src);
+	while (dest[a])
+	{
+		a++;
+	}
 
-	return (result);
+	for (i = 0; src[i] != 0; i++)
+	{
+		dest[a] = src[i];
+		a++;
+	}
+
+	dest[a] = '\0';
+	return (dest);
 }
 
 
