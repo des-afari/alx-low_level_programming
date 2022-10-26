@@ -1,5 +1,14 @@
 #include "main.h"
 
+/**
+ * leet - Encodes a stringinto 1337
+ *
+ * @s: string
+ *
+ * Return: s
+ *
+ */
+
 char *leet(char *s)
 {
 	int a = 0;
