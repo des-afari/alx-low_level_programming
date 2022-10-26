@@ -7,11 +7,11 @@
  *
  * @n: number of elements in the array
  *
- * Return: result
+ * Return: NULL
  *
  */
 
-int reverse_array(int *a, int n)
+void reverse_array(int *a, int n)
 {
 	int *p, i, temp, k;
 
