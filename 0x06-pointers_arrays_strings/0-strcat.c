@@ -13,7 +13,12 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *combined = strcat(*dest, *src);
+	char *result = malloc(strlen(dest) + strlen(src) + 2);
+	strcpy(result, dest);
+	strcat(result, " ");
+	strcat(result, src);
 
-	return (combined);
+	return (result);
 }
+
+
