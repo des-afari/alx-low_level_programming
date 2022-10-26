@@ -1,13 +1,15 @@
 #include "main.h"
 
 /**
- * *_strncat - concatenate strings 
+ * *_strncat - concatenate strings
  *
  * @dest: destination string
  *
  * @src: source string
  *
  * @n: number of characters to be appended
+ *
+ * Return: result
  *
  */
 
