@@ -3,7 +3,7 @@
  * print_chessboard - print a chessboard
  *
  * @a: array
- * 
+ *
  * Return: void
  */
 
