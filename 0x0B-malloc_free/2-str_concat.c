@@ -1,46 +1,49 @@
 #include "main.h"
 
 /**
- * str_concat - concatenates two strings
+ * str_concat - concatenates two string
  *
- * @s1: string 1
+ * @s1: string one
  *
- * @s2: string 2
+ * @s2: string two
  *
  * Return: pointer
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	char *final;
-
-	int i, j, k, l;
+	unsigned int i, j, k, l;
+	char *s;
 
 	if (s1 == NULL)
 		i = 0;
-
+	else
+	{
+		for (i = 0; s1[i]; i++)
+			;
+	}
 	if (s2 == NULL)
-		k = 0;
-
-	for (i = 0; s1[i] != '\0'; i++)
+		j = 0;
+	else
 	{
-		j = i;
+		for (j = 0; s2[j]; j++)
+			;
 	}
 
-	for (k = 0; s2[k] != '\0'; k++)
-	{
-		l = k;
-	}
+	k = i + j + 1;
 
-	final = malloc(sizeof(char) + l + j + 1);
+	s = malloc(k * sizeof(char));
 
-	if (final == NULL)
-	{
+	if (s == NULL)
 		return (NULL);
-	}
 
-	strcat(s1, s2);
+	for (l = 0; l < i; l++)
+		s[l] = s1[l];
 
-	return (s1);
+	for (l = 0; l < j; l++)
+		s[l + i] = s2[l];
+
+	s[i + j] = '\0';
+
+	return (s);
 }
-
