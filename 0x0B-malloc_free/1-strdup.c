@@ -1,26 +1,33 @@
 #include "main.h"
 
 /**
- * _strdup - return  a pointer to a new string
+ * _strdup - Returns a pointer
  *
- * @str: pointer
+ * @str: string
  *
+ * Return: pointer
  */
 
 char *_strdup(char *str)
 {
-	char *x;
+	char *s;
+	int i, l = 0;
 
 	if (str == NULL)
-	{
 		return (NULL);
-	}
-	
-	x = malloc(sizeof(char) * (sizeof(str) / sizeof(str[0])));
 
-	strcpy(x, str);	
+	for (i = 0; str[i]; i++)
+		l++;
 
-	return (x);
+	s = malloc(sizeof(char) * (l + 1));
 
-	free(x);
+	if (s == NULL)
+		return (NULL);
+
+	for (i = 0; str[i]; i++)
+		s[i] = str[i];
+
+	s[l] = '\0';
+
+	return (s);
 }
