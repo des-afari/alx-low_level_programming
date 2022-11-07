@@ -8,3 +8,5 @@ char *_strdup(char *str);
 
 char *str _concat(char *s1, char *s2);
 
+#include <string.h>
+
