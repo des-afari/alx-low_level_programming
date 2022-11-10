@@ -1,48 +1,37 @@
 #include "main.h"
 
 /**
- * string_nconcat - concatenates two strings
- *
- * @s1: string
- *
- * @s2: string
- *
- * @n: int
- *
- * Return: pointer
+ **string_nconcat - a function that concatenates two strings.
+ *@s1 : pointer to string
+ *@s2 : pointer to string
+ *@n : integer
+ *Return: pointer to string
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *value;
-	int i, j, k, l;
+
+
+
+	unsigned int x1, x2, i, j;
+	char *s;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	for (i=0; s1[i] != '\0'; i++)
-		;
-	
-	for (j=0; s2[j] != '\0'; j++)
-		;
-
-	if (n >= j)
-		n = j;
-
-	value = malloc(sizeof(char) * (i + n + 1));
-
-	if (value == NULL)
+	for (x1 = 0; s1[x1] != '\0'; x1++)
+	;
+	for (x2 = 0; s2[x2] != '\0'; x2++)
+	;
+	if (n >= x2)
+		n = x2;
+	s = malloc(sizeof(char) * (x1 + n + 1));
+	if (s == NULL)
 		return (NULL);
-
-	for (k=0; s1[k] != '\0'; k++)
-		value[k] = s1[k];
-
-	for (l=0; s2[l] != '\0'; l++)
-		value[k+l] = s2[l];
-
-	value[k+l+1] = '\0';
-
-	return (value);
+	for (i = 0; s1[i] != '\0'; i++)
+		s[i] = s1[i];
+	for (j = x1; j < x1 + n; j++)
+		s[j] = s2[j - x1];
+	s[j] = '\0';
+	return (s);
 }
