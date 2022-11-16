@@ -1,9 +1,10 @@
-#include "main.h"
+#include "function_pointers.h"
 
 /**
  * array_iterator - executes a function given as a parameter on each element
  * @size: size of array
  * @action: pointer
+ * @array: array
  * Return: void
  */
 
