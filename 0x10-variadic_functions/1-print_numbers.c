@@ -9,7 +9,7 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	if (seperator == NULL)
+	if (seperator == NULL) 
 		return (NULL);
 
 	unsigned int i;
@@ -28,4 +28,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 
 	printf("\n");
+	va_end(args);
 }
