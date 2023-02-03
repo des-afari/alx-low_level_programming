@@ -243,7 +243,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 }
 
 /**
- * shash_table_delete  deletes a shash table
+ * shash_table_delete - deletes a shash table
  *
  * @ht: pointer to the shash table
  * Return: no return
