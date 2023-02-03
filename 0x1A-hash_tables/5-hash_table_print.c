@@ -1,37 +1,41 @@
 #include "hash_tables.h"
+
 /**
- * hash_table_print - function prints a hash table
- *
- * @ht: ptr to hash table
- *
- * Return: void
+ * hash_table_print - prints a hash table
+ * @ht: hash table to be printed
  */
 
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned int x;
-	int flick = 0;
+	unsigned long int index = 0;
+	hash_node_t *temp;
+	bool first = true;
 
-	if (!ht)
-		return;
-	printf("{");
-	for (x = 0; x < ht->size; x++)
+	if (ht && ht->array)
 	{
-		hash_node_t *node = ht->array[x];
-
-		if (node == NULL)
+		putchar('{');
+		for (index = 0; index < ht->size; index++)
 		{
-			continue;
+			if (ht->array[index])
+			{
+				temp = ht->array[index];
+				if (first)
+				{
+					printf("'%s': '%s'", temp->key,
+					       temp->value);
+					first = false;
+				}
+				else
+					printf(", '%s': '%s'", temp->key,
+					       temp->value);
+				while (temp->next)
+				{
+					temp = temp->next;
+					printf(", '%s': '%s'", temp->key,
+					       temp->value);
+				}
+			}
 		}
-		if (flick == 1)
-		{
-			printf(", ");
-			printf("'%s': '%s'", node->key, node->value);
-		}
-		if (flick != 1)
-			printf("'%s': '%s'", node->key, node->value);
-		flick = 1;
+		printf("}\n");
 	}
-	printf("}");
-	printf("\n");
 }
