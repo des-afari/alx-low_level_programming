@@ -1,32 +1,27 @@
 #!/usr/bin/python3
+"""0x1C. C - Makefiles, task 5. Island Perimeter
+"""
+
+
 def island_perimeter(grid):
+    """Find the perimeter of an "island" of 1s in an "ocean" of 0s.
+    For a 2D grid of 0s and 1s, find the perimeter of the contiguous area of
+    1, with negative space in 0s.
+    Args:
+        grid (list of lists of ints): 2D list representation of island
+    Attributes:
+        perimeter (int): total units of cell length around island edge
     """
-        Returns perimeter of grid
-        Parameters:
-            grid (list[list[int]]): a rectangular grid of 0's
-            and 1's representing water and land zones
-
-        Returns:
-            int: the perimeter of the island
-    """
-    rows = len(grid)
-    cols = len(grid[0])
     perimeter = 0
-
-    for i in range(rows):
-        for j in range(cols):
-            if grid[i][j] == 1:
-                # count top and bottom edges
-                if i == 0 or grid[i-1][j] == 0:
+    for x in range(len(grid)):
+        for y in range(len(grid[0])):
+            if grid[x][y]:
+                if y == 0 or not grid[x][y - 1]:
                     perimeter += 1
-                if i == rows-1 or grid[i+1][j] == 0:
+                if y == len(grid[0]) - 1 or not grid[x][y + 1]:
                     perimeter += 1
-
-                # count left and right edges
-                if j == 0 or grid[i][j-1] == 0:
+                if x == 0 or not grid[x - 1][y]:
                     perimeter += 1
-                if j == cols-1 or grid[i][j+1] == 0:
+                if x == len(grid) - 1 or not grid[x + 1][y]:
                     perimeter += 1
-
-
-return perimeter
+    return perimeter
